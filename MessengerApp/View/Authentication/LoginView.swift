@@ -26,7 +26,7 @@ struct LoginView: View {
                         .bold()
                         .foregroundColor(.blue)
                     
-                    VStack(spacing: 20) {
+                    VStack(spacing: 40) {
                         CustomTextField(
                             imageName: "envelope",
                             placeholderText: "Email",
@@ -42,8 +42,6 @@ struct LoginView: View {
                         )
                     }
                     .padding([.top, .horizontal], 32)
-                    
-                    
                 }
                 .padding()
                 
@@ -78,7 +76,8 @@ struct LoginView: View {
                 Spacer()
                 
                 NavigationLink(
-                    destination: RegistrationView(),
+                    destination: RegistrationView()
+                        .navigationBarBackButtonHidden(true),
                     label: {
                         HStack {
                             Text("Don't have an account?")
@@ -87,8 +86,7 @@ struct LoginView: View {
                             Text("Sign Up")
                                 .font(.system(size: 14, weight: .semibold))
                         }
-                        
-                })
+                    }).padding(.bottom, 15)
             }
         }
         
@@ -101,30 +99,3 @@ struct LoginView_Previews: PreviewProvider {
     }
 }
 
-struct CustomTextField: View {
-    let imageName: String
-    let placeholderText: String
-    let isSecureField: Bool
-    @Binding var text: String
-    
-    var body: some View {
-        VStack(spacing: 16) {
-            HStack {
-                Image(systemName: imageName)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 20, height: 20)
-                    .foregroundColor(Color(.darkGray))
-
-                if isSecureField {
-                    SecureField(placeholderText, text: $text)
-                } else {
-                    TextField(placeholderText, text: $text)
-                }
-            }
-            
-            Divider()
-                .background(Color(.darkGray))
-        }
-    }
-}
