@@ -9,23 +9,7 @@ import SwiftUI
 
 struct RegistrationView: View {
     var body: some View {
-        NavigationView {
-            VStack(alignment: .leading) {
-                HStack { Spacer() }
-                
-                Text("Hello.")
-                    .font(.largeTitle)
-                    .bold()
-                
-                Text("Welcome Back")
-                    .font(.largeTitle)
-                    .bold()
-                    .foregroundColor(.blue)
-                
-                Spacer()
-            }
-            .padding()
-        }
+        Text("Registration View")
     }
 }
 
