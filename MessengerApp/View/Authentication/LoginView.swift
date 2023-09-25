@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
+    @State private var email = ""
+    @State private var password = ""
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
@@ -22,9 +25,26 @@ struct LoginView: View {
                     .bold()
                     .foregroundColor(.blue)
                 
-                VStack {
+                VStack(spacing: 20) {
+                    TextField("Email", text: $email)
                     
+                    SecureField("Password", text: $password)
                 }
+                .padding([.top, .horizontal], 32)
+                
+                Button(action: {
+                    print("Handle sign up")
+                }, label: {
+                    Text("Sign In")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .frame(width: 340, height: 50)
+                        .background(Color.blue)
+                        .clipShape(Capsule())
+                        .padding()
+                    
+                })
+                
                 
                 Spacer()
             }
