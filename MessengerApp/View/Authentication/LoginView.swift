@@ -27,9 +27,19 @@ struct LoginView: View {
                         .foregroundColor(.blue)
                     
                     VStack(spacing: 20) {
-                        TextField("Email", text: $email)
+                        CustomTextField(
+                            imageName: "envelope",
+                            placeholderText: "Email",
+                            isSecureField: false,
+                            text: $email
+                        )
                         
-                        SecureField("Password", text: $password)
+                        CustomTextField(
+                            imageName: "lock",
+                            placeholderText: "Password",
+                            isSecureField: true,
+                            text: $password
+                        )
                     }
                     .padding([.top, .horizontal], 32)
                     
@@ -77,6 +87,7 @@ struct LoginView: View {
                             Text("Sign Up")
                                 .font(.system(size: 14, weight: .semibold))
                         }
+                        
                 })
             }
         }
@@ -87,5 +98,33 @@ struct LoginView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
+    }
+}
+
+struct CustomTextField: View {
+    let imageName: String
+    let placeholderText: String
+    let isSecureField: Bool
+    @Binding var text: String
+    
+    var body: some View {
+        VStack(spacing: 16) {
+            HStack {
+                Image(systemName: imageName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 20, height: 20)
+                    .foregroundColor(Color(.darkGray))
+
+                if isSecureField {
+                    SecureField(placeholderText, text: $text)
+                } else {
+                    TextField(placeholderText, text: $text)
+                }
+            }
+            
+            Divider()
+                .background(Color(.darkGray))
+        }
     }
 }
