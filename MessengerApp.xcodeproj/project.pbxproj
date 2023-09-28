@@ -14,6 +14,11 @@
 		077E33082AC21C0C00E5B2A3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077E33072AC21C0C00E5B2A3 /* LoginView.swift */; };
 		077E330A2AC21C1500E5B2A3 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077E33092AC21C1500E5B2A3 /* RegistrationView.swift */; };
 		077E330C2AC240E900E5B2A3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077E330B2AC240E900E5B2A3 /* CustomTextField.swift */; };
+		07BE91862AC616450026B028 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE91852AC616450026B028 /* MainTabView.swift */; };
+		07BE918B2AC618490026B028 /* ChannelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE918A2AC618490026B028 /* ChannelsView.swift */; };
+		07BE918D2AC618720026B028 /* ChatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE918C2AC618720026B028 /* ChatsView.swift */; };
+		07BE91902AC618960026B028 /* ConversationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE918F2AC618960026B028 /* ConversationsView.swift */; };
+		07BE91922AC618D10026B028 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BE91912AC618D10026B028 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,11 @@
 		077E33072AC21C0C00E5B2A3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		077E33092AC21C1500E5B2A3 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		077E330B2AC240E900E5B2A3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		07BE91852AC616450026B028 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		07BE918A2AC618490026B028 /* ChannelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsView.swift; sourceTree = "<group>"; };
+		07BE918C2AC618720026B028 /* ChatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsView.swift; sourceTree = "<group>"; };
+		07BE918F2AC618960026B028 /* ConversationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsView.swift; sourceTree = "<group>"; };
+		07BE91912AC618D10026B028 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +113,11 @@
 		077E33042AC21B8800E5B2A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				07BE918E2AC618880026B028 /* Conversations */,
+				07BE91882AC618320026B028 /* Chats */,
+				07BE91872AC6182B0026B028 /* Channels */,
+				07BE91892AC618390026B028 /* Settings */,
+				07BE91802AC616040026B028 /* Main */,
 				077E33062AC21BF300E5B2A3 /* Authentication */,
 			);
 			path = View;
@@ -122,6 +137,46 @@
 				077E33092AC21C1500E5B2A3 /* RegistrationView.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		07BE91802AC616040026B028 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				07BE91852AC616450026B028 /* MainTabView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		07BE91872AC6182B0026B028 /* Channels */ = {
+			isa = PBXGroup;
+			children = (
+				07BE918A2AC618490026B028 /* ChannelsView.swift */,
+			);
+			path = Channels;
+			sourceTree = "<group>";
+		};
+		07BE91882AC618320026B028 /* Chats */ = {
+			isa = PBXGroup;
+			children = (
+				07BE918C2AC618720026B028 /* ChatsView.swift */,
+			);
+			path = Chats;
+			sourceTree = "<group>";
+		};
+		07BE91892AC618390026B028 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				07BE91912AC618D10026B028 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		07BE918E2AC618880026B028 /* Conversations */ = {
+			isa = PBXGroup;
+			children = (
+				07BE918F2AC618960026B028 /* ConversationsView.swift */,
+			);
+			path = Conversations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,11 +249,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07BE918D2AC618720026B028 /* ChatsView.swift in Sources */,
 				077E33082AC21C0C00E5B2A3 /* LoginView.swift in Sources */,
+				07BE918B2AC618490026B028 /* ChannelsView.swift in Sources */,
 				077E32F62AC21B3C00E5B2A3 /* ContentView.swift in Sources */,
 				077E32F42AC21B3C00E5B2A3 /* MessengerAppApp.swift in Sources */,
+				07BE91922AC618D10026B028 /* SettingsView.swift in Sources */,
 				077E330A2AC21C1500E5B2A3 /* RegistrationView.swift in Sources */,
 				077E330C2AC240E900E5B2A3 /* CustomTextField.swift in Sources */,
+				07BE91862AC616450026B028 /* MainTabView.swift in Sources */,
+				07BE91902AC618960026B028 /* ConversationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
