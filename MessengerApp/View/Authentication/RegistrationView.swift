@@ -78,8 +78,7 @@ struct RegistrationView: View {
             
             Spacer()
             
-            Button(action: { mode.wrappedValue.dismiss() },
-                   label: {
+            Button(action: { mode.wrappedValue.dismiss() }, label: {
                 HStack {
                     Text("Already have an account?")
                         .font(.system(size: 14))
